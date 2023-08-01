@@ -83,6 +83,12 @@ body a {
     width: 18rem;
 }
 
+/* Page */
+
+.kit-paging {
+    margin: 2rem 0;
+}
+
 /* Footer*/
 .kit-primary-footer {
     border-top: 1px solid #eaeaea;
