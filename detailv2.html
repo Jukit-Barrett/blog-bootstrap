@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/blog.css">
+
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./assets/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <link href="./assets/css/default.min.css" rel="stylesheet">
+
+    <script src="./assets/js/highlight.min.js"></script>
+</head>
+<body>
+
+<!-- Header Begin: -->
+<header class="container-fluid kit-primary-header">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-4">
+                <ul class="nav kit-menu-links">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <img class="kit-logo" src="./assets/img/content.jpeg" alt="blog">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">
+                            <strong>
+                                Website Blog
+                            </strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-8">
+                <ul class="nav justify-content-end kit-menu-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End; -->
+
+<!-- Main Begin: -->
+<main class="container text-center">
+    <div class="row">
+        <!-- Left Sidebar Begin: -->
+        <div class="col-3">
+
+            <div class="kit-left-sidebar">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit"><i class="bi-search"></i></button>
+                </form>
+            </div>
+
+            <div class="kit-left-sidebar">
+                <h3><a href="#">Recent Posts</a></h3>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        A list item
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        A second list item
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        A third list item
+                        <span class="badge bg-primary rounded-pill">1</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="kit-left-sidebar">
+                <h3><a href="#">Recent Posts</a></h3>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#">A list item</a>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#">A second list item</a>
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="#">A third list item</a>
+                        <span class="badge bg-primary rounded-pill">1</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Left Sidebar End; -->
+
+        <!-- Article Content Begin: -->
+        <div class="col-9">
+            <!-- 文章 Begin: -->
+            <div class="kit-article-list-container">
+
+                <div class="kit-article-image">
+                    <a href="#"><img src="./assets/img/content.jpeg" class="img-fluid" alt="..."></a>
+                </div>
+
+                <h2 class="kit-article-title"><a href="#">Example heading</a></h2>
+
+                <div class="kit-article-info">
+                    <span>
+                        <i class="bi-github" role="img" aria-label="GitHub"></i>
+                        <a href="#" class="badge text-bg-light">PHP</a>
+                        <a href="#" class="badge text-bg-light">Java</a>
+                    </span>
+                    <span>
+                        <i class="bi-person"></i>
+                        <a href="#" class="badge text-bg-light">朱世杰</a>
+                    </span>
+                    <span>
+                        <i class="bi-calendar-date"></i>
+                        <i class="badge text-bg-light">2023-11-11</i>
+                    </span>
+                </div>
+
+                <div class="kit-article-content">
+                    <section>
+                        <!-- wp:code -->
+                        <pre class="wp-block-code"><code>/**
+     * @desc 检索
+     * @param array $inputParams
+     * @return array
+     * @throws NoticeException
+     * @throws \think\exception\DbException
+     */
+    public function retrieve(array $inputParams)
+    {
+        $params = &#91;
+            'page'          => $inputParams&#91;'page'] ?? 1,
+            'perPage'       => $inputParams&#91;'perPage'] ?? 10,
+            'sort'          => $inputParams&#91;'sort'] ?? null,
+            'sendtimeStart' => $inputParams&#91;'sendtimeStart'] ?? null,
+            'sendtimeEnd'   => $inputParams&#91;'sendtimeEnd'] ?? null,
+            'replyUserId'   => $inputParams&#91;'replyUserId'] ?? &#91;],
+        ];
+
+        if ( !empty($params&#91;'sendtimeStart']) &amp;&amp; !empty($params&#91;'sendtimeStart'])) {
+            $sendtimeStart = strtotime($params&#91;'sendtimeStart']);
+
+            if ($sendtimeStart === false) {
+                throw new NoticeException("起始发送时间错误: {$params&#91;'sendtimeStart']}");
+            }
+
+            $params&#91;'sendtimeStart'] = date('Y-m-d H:i:s', $sendtimeStart);
+
+            $sendtimeEnd = strtotime($params&#91;'sendtimeEnd']);
+
+            if ($sendtimeEnd === false) {
+                throw new NoticeException("结束发送时间错误: {$params&#91;'sendtimeEnd']}");
+            }
+
+            $params&#91;'sendtimeEnd'] = date('Y-m-d H:i:s', $sendtimeEnd);
+        }
+
+        $paramSign = json_encode($inputParams);
+
+        $cacheKey = "T" . $this->getEnterpriseId() . "StatisticsService:retrieve:" . md5($paramSign);
+
+        return Cache::remember($cacheKey, function () use ($params){
+            $repository = RepositoryFactory::getMailsRepository();
+
+            $rows = $repository->retrieve($params, function (Model $model) use ($params){
+                //
+                $model->fieldRaw('reply_user_id, count(*) as reply_mail_count');
+                //
+                $model->where('enterprise_id', $this->getEnterpriseId());
+                //
+                $model->where('reply_user_id', '>', 0);
+                //
+                if ( !empty($params&#91;'sendtimeStart']) &amp;&amp; !empty($params&#91;'sendtimeEnd'])) {
+                    $model->where('sendtime', '>=', $params&#91;'sendtimeStart']);
+                    $model->where('sendtime', '&lt;', $params&#91;'sendtimeEnd']);
+                }
+                //
+                if (isset($params&#91;'replyUserId']) &amp;&amp; !empty($params&#91;'replyUserId'])) {
+                    $model->whereIn('reply_user_id', $params&#91;'replyUserId']);
+                }
+                //
+                $model->group('reply_user_id')->order('reply_mail_count', 'desc');
+            }, function (Model $model, Bootstrap $bootstrap) {
+                //dump($model->getLastSql());
+            });
+
+            $list = &#91;];
+            // 邮件回复用户统计
+            foreach ($rows as $row) {
+                $list&#91;] = &#91;
+                    'replyUserId'    => $row&#91;'reply_user_id'],
+                    'replyMailCount' => $row&#91;'reply_mail_count'],
+                ];
+            }
+
+            return $list;
+        },                     5);
+    }</code></pre>
+                        <!-- /wp:code -->
+
+                        <!-- wp:paragraph -->
+                        <p></p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如果想了解算法在行业领域中的落地应用，就不得不提及公共服务领域。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>曾经，办理身份证、递交材料等事务都需要办理人亲自到线下办事网点操作，涉及步骤很复杂，包括询问、取材料、填写、递交、等待审核、取回等。有时办理人会因为缺少材料白跑一趟，或者材料有误被驳回，再经历一遍整个环节。如果办理人在异地，去不了线下网点，则很多事情完全无法办理，误工误事。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今，“一网通办”“一窗受理”极大地便民利企，也更好地促进了政府职能转型。这其中，不得不归功于大数据及人工智能算法技术的加持。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>不仅在政务服务领域，大到整个数字政府的方方面面，大数据与人工智能算法都如影随形。近年来，大多数地方基本形成了“一云一库一平台”的大数据运行与管理格局。以5G、大数据、云计算、人工智能、区块链等为代表的数字新基建已成为“十四五”时期各地数字政府建设的重要引擎。在城市数字化转型大背景下，数字经济、数字治理和数字生活的发展，将为城市大数据的智能应用创造巨大的市场和众多的场景，为人工智能算法在公共服务领域的发展应用创造前所未有的机遇。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">为什么红绿灯的时长设置不一样</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>你有没有发现，不同路口的红绿灯等待时长不一样：上班路上的红灯时长为60秒，而通往商场路上的红灯为99秒……</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>曾几何时，很多城市马路上的红绿灯间隔统一设置为60秒，这一看似公平的道路交通设置，其实并没有考虑到不同路口的人流量、车流量差异，而且万一发生交通事故，造成了道路拥堵，车辆即使争分夺秒也难以顺畅通行。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>其实，不同红绿灯的时长差异是“智慧交通”的一大体现，这一城市治理好帮手能够为城市的科学治理出谋划策，满足人们的便捷出行。让我们来一起看看智慧城市的“交通大脑”是如何施展“魔法”的吧！</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">首先，智能调配红绿灯，解决拥堵问题。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：利用感应线圈检测出车流数据，然后由交警进行人为交通信号灯的控制，这样容易耗费大量的警力。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：城市交通大脑可以利用城市交通摄像头进行视频图像的数据采集，然后再用内置的计算机视觉芯片进行边缘计算，获得即时交通流数据，如机动车数量、车速、道路拥堵及排队情况等。同时，基于各个时段、各种天气下的车流大数据，交通大脑能够智能预测未来某一时段和天气下的车流，并提前为所有红绿灯“做好打算”，选择最合适的通行方案，比如为车多的方向配置更多绿灯时间，车少的方向配置更多红灯时间。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>借助科学合理的配置规划，道路通行效率大大提升，拥堵问题得以缓解。不仅如此，交通大脑系统还会通过反馈信息自我学习，保证算法自动革新升级，保障每个周期的设计都是基于当前信息下的最优配时方案。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">其次，开发联动控制系统，实现公交优先通行。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>考虑到公交车是城市道路运输的重要途径，为了保证大多数人的出行，同时也减轻路网负担，智慧交通会酌情为公交车通行提供便利。依据每个城市不同的地形、路网瓶颈、市民出行习惯、交通痛点等特征，城市交通大脑可以在车路协同技术的加持下，实时获取智能联网公交车辆速度、位置、驾驶状态等数据，并与红绿灯控制系统实时联动。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>当车辆接近智能路口时，后台与红绿灯控制系统进行数据交互，并实时“通知”各信号灯调整时长配置，通过红灯缩短、绿灯延长等方式实现公交优先通行，提高公共交通出行吸引力，减轻路网负担。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">最后，云计算全局调动，实现智能调度。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>有了城市交通大数据，就可以在收集到路网实时数据后，调用云端的计算机集群进行云计算。假如某处道路发生车祸，智慧交通可保证问题解决得更迅速和完善。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：发现事故后由群众或交警报警，再派人来处理问题。万一事故发生在人多的路口或现场情况复杂，各部门联动就很难做到争分夺秒，耗时耗力，甚至会再次危及过往行人的生命财产安全。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：摄像头和红绿灯充当“火眼金睛”，能够及时把现场信息和附近的拥堵状况一并回传到交通大脑。一方面，交通大脑收到信息后，会对车祸现场以及周边交通进行计算，迅速做出合理的处置策略和警力调度策略，将其推送给交警来决定是否出警、几人出警、在哪几个路口疏导交通等。另一方面，交通大脑根据数据情况，立刻“热心”提醒所有本来要经过此路段的车辆，并动态调控红绿灯配时，避免更多不明真相的车主堵在路上。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>正所谓“城市建设，交通先行”，智慧交通运用信息和通信技术手段感知、分析、整合城市运行系统中的各项关键信息，从而为城市主体——政府、企业和个人的各种需求提供智能响应服务，进一步打造智慧城市，实现城市的智慧决策与科学治理。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">加油站有了它，错费、少油统统解决</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>有车的朋友，肯定都有过去加油站排队加油的经历。那么，你是否有过在加油时突然发现金额上涨，一脸困惑地向加油人员发问，才被告知税费有所调整的时候？加油站遍布全国各地，你又是否好奇过，市场监管部门是如何监管加油站的油品费用与品质，来保障广大人民群众利益的？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>要想弄明白这些问题，就不得不提到部分市场监管部门引入的“智慧监管”这一得力助手。简单来说，智慧监管就是借助人工智能技术，为市场监管插上智慧的翅膀，让违规行为无处可逃。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>以加油业收费不明及品控漏洞为例，在智慧监管的引领下，某市引入成品油税费和安全监管平台后，有效遏制了加油行业的不规范现象。那么算法是怎样通过智慧监管平台发挥神奇功效的呢？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">一方面，精准监管实际销售端的加油数据。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：消费者在加油时，加多少油、如何计费都掌握在加油员手中。加油员手抖一下，提前拿走油枪，或者因为眼花选错了类目而算错账，消费者就会稀里糊涂花冤枉钱。监管部门可能需要一个月以后才能发现错账，导致数据混乱，形成监管盲区。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：监管平台要求每台加油机都安装“算法之眼”传感器，清晰记录每台加油机的输出油量、费用等数据，实现数据监测全透明。加油机上的传感器与其他传输设备连接在一起运行，当加油机有油量输出时，传感器便会把输出油量数据上传至成品油税费和安全监管平台。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>借助传感器的“第三只眼”以及算法的“第三只手”，市场监管部门能够直接操作成品油税费和安全监管平台，全面掌握加油机的实时运营情况以及相关数据，并将数据上传云端，确保每一次加油都“来源可循、去向可溯、状态可控”，大大提升了成品油监管效能，实现了监管无死角。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">另一方面，动态监管成品油进购端，确保品质安全。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：未引入智能监管平台前，加油车上的成品油被偷梁换柱、以次充好的现象时有发生。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：市场监管部门可以以成品油税费和安全监管平台为数据监测载体，把道路交通运输的卡口摄像机接入智能监管系统，实时线上核验路上行驶的油罐车资质和运输状况信息，加强对行驶油罐车的成品油运输监管力度，切实从源头上堵住油品销售的漏洞，保障油品货真价实。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>总而言之，借助算法监管平台，可以下溯加油数据，上溯成品油源头，进行全环节监测，实现加油全流程透明化、实时化。算法为市场监管部门打开“天眼”，打通了成品油进购、加油站加油与市场监管部门监管之间存在的屏障，维护了风清气正的市场环境与广大群众的合法权益。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>某智能监管平台实时反馈数据库显示，系统共监测某县成品油交易200余万笔，销售成品油7万余千升，销售金额为46738万元。在成品油税费和安全监管平台的助力下，2021年该平台所在县共增加税收2000万元以上。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>未来，大数据、算法等技术将被充分利用，进一步探索推行以远程监管、移动监管、预警防控为特征的非现场实时监管体系，提升各行各业的市场监管精准化、智能化水平。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">诈骗层出不穷，算法筑起反诈“防火墙”</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>和朋友聚会的间隙，你有没有拿起手机，发现一条内容为“尊敬的×××您好，恭喜您中奖了！请点击以下链接领取奖品！”的短信？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>昏昏欲睡的清晨，你有没有被急促的电话铃声惊醒，看一眼手机屏幕却发现是来自几内亚的奇怪号码？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>为避免大家因接听一通电话或点击一则短信中的链接便白白损失巨额钱财，我们机智负责的“智慧公安”闪亮登场！</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>近年来，各地公安部门纷纷引入智慧公安，帮助公安部门“出任务”。智慧公安最亮眼的功绩之一，就是开发出越来越智能的防范电信诈骗系统（即反诈系统），从源头上建立无辜群众和电信诈骗犯之间的屏障。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>其实，打造训练有素的反诈系统需要三步。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">第一步，运用特征算法，为大量呼出号码打上标签。</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>反诈系统通过多频率单号短时呼叫、超长通话、呼叫连续的企业通信行为模式来判断呼出号码所属企业是否有诈骗风险。打个比方，如果某一号码在5分钟内呼出了300个电话，或者某一个电话长达300分钟，甚至呼出每个电话的间隔不超过2分钟，那么，反诈系统就会将其标记为“有诈骗嫌疑的号码”。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">第二步，运用语义分析系统，训练反诈系统的诈骗敏感度。</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>如果只根据反诈系统对通话数据的智能判断，便笼统地为号码贴上“好”或“坏”的标签，也存在误判的可能。因此，反诈系统还会运用语义分析工具对大量通话文本进行语义分析，将通话文本拆解为由关键字、关键词构成的文本单元，找出其中的敏感关键字，标记此类关键字，再由人工识别来修正系统的判断结果，以提高对违规号码的检测效率和准确性。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">最后一步，精准标记违规号码。</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>如果某一企业的呼出通话中涉及人名、地名以及“身份证号”“卡号”“公检法”“礼品”等敏感词，触发了敏锐的反诈系统，呼出号码所在企业则有可能被停机、停号，还可能被上报给运营商，添加到呼出黑名单中，这也是我们在接到陌生来电时会被提示“该号码被多人标记为诈骗骚扰”的缘由。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>反诈系统通过在呼出阶段提醒接听方此通电话存在嫌疑，为接听方筑起心理防线，提醒其留意潜在风险。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>总而言之，智慧公安通过“运用算法将大量数据标签化→引入多种系统提升算法准确性→将危险信号及时传递给人民群众”三个步骤，完成保护人民群众生命财产安全这一艰巨任务。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>数据显示，仅2021年1～4月短短几个月，某省共破获电信网络诈骗案件1.18万起，采取刑事强制措施8771人，挽回经济损失8.8亿元，足以见得智慧公安的功力。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>此外，近年来某省警方紧扣大数据、算法等信息技术发展智慧公安系统，开发建设全省警情大数据应用服务平台。平台按秒汇聚全省72个110接警区的接处警数据，实现对全省警情数据的实时监测、多维展示和深度应用。警情大数据平台建成后，每个接警区产生的新110接处警信息，都会实时汇聚至全省警情数据库，确保省市县三级公安机关都能在第一时间获取相关数据信息，达到“实时监测治安，态势一网掌控，深度研判警情，资源全警应用”的目的。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>有了算法加持的智慧公安帮忙，警察叔叔再也不用大海捞针式地寻找诈骗分子，公安部门运转效率大大提升。相信在不远的未来，越来越多的公安部门将会借助算法装备上“三头六臂”，筑起保障人民群众生命财产安全的有效屏障。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">算法让12345热线“热而不乱”</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>遇到难事愁眉不展时，除了“搜索一下”，大多数人的第一反应是拨打12345，求助于这一“万能”热线。但拿起电话后，却被漫长的语音提示、复杂的转机分类绕得晕头转向，甚至忙碌了三十分钟，也没能接通人工客服……</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>热线难以顺利接通、接线员态度热情却答非所问、投诉石沉大海等问题一直是困扰广大百姓的难题，甚至部分群众对拨打12345热线已产生了抵触心理。与此同时，政府部门对此既头疼又委屈：我们已经为建设12345热线投入那么多接线员和工单处理员了，为啥效果仍然不够好？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>好在近年来，随着大数据、算法技术的兴起与广泛应用，12345政务服务便民热线正在变得越来越聪明！</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>那么，算法是怎样让热线充满智慧的呢？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">首先，引入智能客服代替人工，提高热线接通率。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：12345热线作为广大群众与政府部门沟通的“排头兵”，不仅会接到民生相关事项的咨询，可能还会涉及税务事项、市场监管事项，巨大的咨询体量造成了较大的用工压力。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：通过在语音渠道部署经过大量训练后能够识别特定问题的智能语音机器人，12345热线的用工压力大大减轻，热线接通率显著提高。此外，依据2022年《智能客服数字化趋势报告》，智能客服的准确率从一开始的40%～50%，提升到了当前的90%以上。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>智能客服可以同时受理大量的群众诉求，服务质量稳定，可有效分流并高效处置原本需要人工客服解答的大量重复诉求，提高咨询类诉求的即时解答率。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">其次，借助智能坐席助手，快速处置工单，保证诉求派发至正确部门。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：由人力处置工单时，流程烦琐且效率有限，经常是一名工单处理员花一整天盯着屏幕，也只能处理几十条数据。处理员累得头昏眼花，耗时一周才能顺利下发完全部工单，几天后又接到市场监管部门的电话：“某条投诉是税务部门的，怎么分到我们这里来了”。而一旦发生错误，将导致工单处理时间更长。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：有算法赋能的智能坐席助手能够通过文本分析技术及多种算法实现智能分类、智能查重、智能派单，助力12345热线快速处置工单，极大提升了诉求受理效率。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>智能坐席助手能够按照问题的责任归属、部门归属，把接收到的群众诉求精准派送下去，不会出现反复退单情况，因此能有效提升工单派发效率。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">最后，数据赋能一线工作者，实现“未诉先办”。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：“群众反馈→热线收单→热线派单→基层落实”这一流程往往需要耗费数天甚至数月，群众时常感觉自己的诉求石沉大海。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：12345热线能够充分运用数据关联、数据分析技术，助力一线工作者实时预警热点问题、突发事件。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>有了算法帮忙，后台能够实时生成热线日报、周报、月报内容，协助分析汇报当天热线受理量、热点问题、督办件等重点工作内容。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>此外，12345热线还可以运用大数据、人工智能技术综合分析各类数据，将群众反映的问题转化为热点坐标，为工作人员提供更精细的参考，帮助及时发现辖区内群众反馈的热点问题并实时预判、预警热点问题和突发事件，为决策提供强有力的支撑，实现“未诉先办”。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>总而言之，借助算法的“神力”，12345热线能够实现“接得更快，分得更准，办得更实”，大大提升热线响应效率及问题解决效率。群众的声音更易被听到，政府部门的努力也更易被群众看见，双方的良性互动有助于形成对群众诉求快速响应、高效办理、及时反馈的长效服务机制。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>算法加持后的12345热线正式投入使用后，某市的日均接入总量5269通，较上线前增加31.7%，高峰时段呼入总量超7000通，提高了呼入电话接起率；日均通话量4034通，日均有效诉求3340件，较上线前提高33.6%，有效解决了高峰期诉求处理问题。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>12345热线的智能化永远在路上。未来，算法与12345热线的联结会越来越密切，相关行业从业者也将不断探索，继续梳理应用场景，开发相应算法，不断将热线数据和多源数据融合、应用，进一步提升智能化水平，为大家的美好生活、城市的智慧治理添砖加瓦。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">算法担任惠企管家，实现政策精准推送</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>作为一名光荣的纳税人、缴费人，你是否听到过很多的税收优惠政策，但需要时却依旧弄不清楚具体流程？也许你所在的城市出台了众多的税收优惠政策，但正是因为你不清楚可以按照哪条政策申请、准备哪些材料、走哪些流程，从而让补贴从手上白白溜走。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>近年来，为了进一步推进纳税便利化改革，打造稳定、公平、透明的税收营商环境，国家税务总局大力推出多项税收优惠政策，不断推进税收取之于民，用之于民。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>然而，为了确保准确、公平，这些优惠政策通常有着大量的实施细则，企业在查找、解读时会耗时耗力，“像是在翻没有目录的牛津字典”是较为常见的场景。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>此时，算法闪亮登场，全力解决“税务部门制定政策难、目标企业查找政策难”这两大难题，成为税企良性互动的重要桥梁。那么，算法究竟发挥了怎样的“神力”呢？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">首先，调用分析海量数据，科学制定税收优惠政策，确保惠企政策切实利民。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：政策的制定通常是多部门坐在一起，根据已知信息推出相应的优惠措施。至于政策的具体受众、覆盖范围、实际效果，则像是在“摸着石头过河”。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：有了大数据及算法技术，税务部门在制定惠企政策前，会智能采集活动区域内海量企业的属性数据（如注册资本）、活动数据（如资质认定）、填报数据（如项目投资额）等重点数据信息，并加以全量分析。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>在此基础上，税务部门能够根据数据的“指引”，合理划定受惠企业范围以及申请条件，确保政策制定的科学化，以推动区域资源的高效配置，营造公平可预期的市场环境。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">其次，提取企业关键信息，为企业精准画像，点对点推送惠企政策。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：虽然各个政府部门手中都掌握有大量数据，但这些数据通常被锁在部门的“小抽屉”里，造成了信息壁垒，无法互通有无。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：既然大家都知道“人找政策”难，那么“政策找人”便成为税务部门的创新尝试。而精准找人的关键，便是形成目标对象的精准画像，让政策知道该找谁。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>绘制企业精准画像的前提是打通各个政府部门间的信息壁垒，融合各类数据信息，形成庞大的超级法人数据库。在政策推送环节引入大数据及算法技术后，各部门间小小的“抽屉格”纷纷被打通，跨部门海量数据被整合至“大仓库平台”上以便统一管理。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>有了画像基础后，算法系统后台即可生成全景式企业画像。依据大量政策的线上集成，政策推送平台会进一步运用大数据算法和人工智能技术，通过对全景式企业画像的智能匹配，将企业可申报的政策、政策匹配度及政策申报路径等相关信息及时主动推送至对应企业，甚至精确计算出企业可获资助的金额，让企业打开门便能迎接惊喜。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>税收优惠政策是深化“放管服”改革过程中的重要一环，也是公平稳定税收营商环境的维护者。政策算法化促进了科学制定政策、精准推送政策，打开了优化营商环境的思路和途径。插上算法“飞毛腿”的政策不仅打通了落地“最后一公里”，搭建了政企交流沟通的桥梁，也为营商环境的优化安上了智慧内核。在不远的未来，我们将拭目以待算法技术如何进一步服务于税企沟通，服务于企业竞争力提升，服务于城市可持续发展。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading -->
+                        <h2 class="wp-block-heading">会写文书的算法，才是好的法院助手</h2>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>你是否时常听到在法院工作的朋友抱怨案子堆积如山，加班到深夜也处理不完？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>随着社会经济的发展，全国案件量激增。据统计，全国法院每年审理案件超过8500万件，年法官办案量141件，而全国员额法官只有12万人。在具体法务工作中，法官在开庭前需要进行烦琐的准备工作，详读卷宗、分析案情、研究法律，大量烦琐事务使得法院运转效率低下，案件堆积成山。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>在这一背景下，“智慧法院”应运而生。面对案多人少的难题，人民法院把握智能化发展趋势，不断运用大数据、人工智能等前沿技术推进智慧法院建设实践，将信息技术与法院业务深度融合。智慧法院是将人工智能应用与法务需求相结合，以高度信息化方式支持司法审判、诉讼服务和司法管理，实现全业务网上办理、全流程依法公开、全方位智能服务的人民法院组织、建设、运行和管理形态。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>那么，严肃审慎的司法行业是如何与算法碰撞出火花，插上智慧翅膀的呢？</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">首先，引入精准分流算法，提升案件简繁分流效率与精准度。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：在过去的案件分流过程中，法官需要浏览大量文书，了解案情以进行量刑判断，非常耗费精力和时间。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：新一代智慧繁简分流系统通过固化分流规则、结构化相应要素，充分减轻法官人为繁简分流案件的工作量。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>一方面，算法将分流规则“固化”，即对海量案件抽丝剥茧后，归纳出判断案件繁简程度的规则。例如，若案情提及“发生纠纷，无人伤亡”，则被系统归为“简单案件”类别；若案情涉及“事故造成×死×伤”，则归入“复杂案件”一类。通过将案件繁简分流的标准一致化，精准分流算法能够避免主观判断，确保绝大多数相似案件的分流结果是一致的。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>另一方面，算法参照主体数量、证据数量与特征信息等要素进行结构化处理，即按照不同标签拆解大量案件。如此一来，以往冗长的案件材料可以被一目了然地简化为“案件涉及×人、共收集×类证据、导致×种后果”，极大减少法官判断繁简分流元素的工作量，显著提高案件繁简分流效率。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">其次，引入智能辅助审理系统，自动草拟判决书。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：庭前阅卷、查找相似案例、量刑判断等工作常常会耗费法官大量时间，且法官的主观判断偶尔也会对量刑结果有所影响。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：智能辅助审理系统能够利用知识图谱技术，自动识别案件事实、认定法官的争议焦点，并结合对大量裁判文书的学习，帮助法官草拟完整的判决书。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>加持了响应算法的智能辅助审理系统可以利用“火眼金睛”识别出特定关键词，根据案件事实涉及的“持械”“盗窃”“口角”“斗殴”等词汇，自动草拟个性化判决书，有效减少法官至少75%的庭前阅卷时间，并将相似案例推荐匹配度从20%提升到90%，实现精准推荐。此外，智能辅助审理系统还可以自动生成70%以上的庭审文本，大大提升法官的工作效率。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:heading {"level":3} -->
+                        <h3 class="wp-block-heading">最后，算法助力卷宗存档信息电子化，完善卷宗管理。</h3>
+                        <!-- /wp:heading -->
+
+                        <!-- wp:paragraph -->
+                        <p>以往：每次诉讼结束后，需要专人对历史诉讼并且已经结案的纸质档案进行整理装订，此类重复性工作耗时耗力，还存在归错类的风险。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>如今：通过OCR（文字识别技术）等技术的运用，智慧法院能够实现档案查阅、检索全自动化。有了大数据、算法等“黑科技”，法院可以直接结合卷宗材料特点，对卷宗文本进行关键词识别与关键信息提取，并直接按照“已结案”“已过追诉时效期限”等不同标签让大量卷宗找到自己的归属。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>此外，通过对诉讼档案进行从纸质文本向电子文档的转换和数字化加密，智慧法院得以建成资料齐全的电子档案数据库。卷宗信息化、电子化既提升了档案保管的安全性，又提高了历史档案利用效率，进一步推动法律服务“智慧审判”的建设进程。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>得益于以大数据、算法技术为基础的信息化建设，群众打官司更加便捷。截至2018年年底，全国81.8%的法院支持网上立案，全国范围内实现跨域立案的法院已达1154家，“24小时不打烊”的法院越来越多；依据《中国法院信息化发展报告No.5（2021）》，全国74%的法院实现电子卷宗随案同步生成。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>智慧法院建设的飞速发展，映照着人民法院“努力让人民群众在每一个司法案件中感受到公平正义”的价值追求。深入推进智慧法院建设，将信息技术与司法规律深度融合，法院必能更好地满足人民群众对公平正义的需求，为全面依法治国、推进国家治理体系和治理能力现代化提供坚实保障。</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p>参考代码：</p>
+                        <!-- /wp:paragraph -->
+
+                        <!-- wp:paragraph -->
+                        <p></p>
+                        <!-- /wp:paragraph -->
+                    </section>
+                </div>
+
+
+            </div>
+            <!-- 文章 End; -->
+
+        </div>
+        <!-- Article Content End; -->
+
+        <!-- Right Sidebar Begin: -->
+
+        <!-- Right Sidebar End; -->
+    </div>
+</main>
+<!-- Main End; -->
+
+<!-- Footer Begin: -->
+<footer class="footer container-fluid kit-primary-footer">
+    <div class="container kit-primary-footer-container">
+        Copyright © 2023 Website Local | Powered by <a href="#">Kitgor</a>
+    </div>
+</footer>
+<!-- Footer End; -->
+
+</body>
+<script>
+    // 语法高亮
+    hljs.highlightAll();
+</script>
+</html>
